@@ -6,28 +6,28 @@
 // color enum
 enum rbtree_color
 {
-   RED, BLACK
+    RED, BLACK
 };
 
 // compare function
-typedef int (*compare_func)(void* left, void* right);
+typedef int(*compare_func)(void* left, void* right);
 
 // tree node
 struct rbtree_node
 {
-   void *data;
-   struct rbtree_node *left;
-   struct rbtree_node *right;
-   struct rbtree_node *parent;
-   enum rbtree_color color;
+    void *data;
+    struct rbtree_node *left;
+    struct rbtree_node *right;
+    struct rbtree_node *parent;
+    enum rbtree_color color;
 };
 
 // tree
 struct rbtree
 {
-   struct rbtree_node *root;
-   uint64_t count;
-   compare_func compare;
+    struct rbtree_node *root;
+    uint64_t count;
+    compare_func compare;
 };
 
 // functions

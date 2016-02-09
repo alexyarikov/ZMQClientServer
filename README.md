@@ -1,4 +1,33 @@
-# ZMQClientServer===================================================================================================
+# ZMQClientServer
+
+PROBLEM:
+
+Implement an in-memory database that consists of indexed table for storing sales data for a set of sales employees. The data stored will be: employee-id, employee name, gender, date of birth, plus data
+for the last 10 years of annual salary, annual bonus, and annual sales etc.
+
+Implement features for insert, delete and lookups with key. Another feature is to query the number of employees within a certain range specified by the user.
+
+The queries could be very simple: lookup a single employee data given the key OR the query could be a bit complex like find the number of employees within a range of the following:
+- annual bonus range
+- annual compensation range (salary + bonus)
+- annual sales range
+- age range
+
+REQUIREMENTS:
+
+Use Red-Black tree data structures and algorithms to organize that data.
+
+The implementation can be in the model with several clients and a single server where the server maintains an in-mem database.
+The clients accept the user input and send the request to the server and the server processes those and returns the result/success/failure to the client. The client will show the result to the user.
+
+Implementation should allow for the scaling up to a very large number (few hundred thousand at least) of entries without any performance loss.
+
+The implementation should allow for large #s of simultaneous queries for information (via multiple threading in the server) to reduce the latency.
+
+ZMQ is used as communication between the clients and the server.
+
+
+
 * To build go to project root folder and run make all.
 * To build testcases go to project root folder and run make test.
   Run only one client application instance to perform testcases.
@@ -8,7 +37,7 @@
 
 * To run server specify bind port command line argument:
 ./server 55555
-===================================================================================================
+
 Due to lack of time I didn't implement some features in this task.
 Below are such restrictions and suggestions regarding this.
 

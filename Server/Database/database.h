@@ -7,13 +7,13 @@
 // database item
 struct DatabaseItem
 {
-   uint64_t id;
-   char name[EMPLOYEE_NAME_SIZE];
-   Employee__Gender gender;
-   uint64_t date_of_birth;
-   double last_10_annual_salary;
-   double last_10_annual_bonus;
-   double last_10_annual_sales;
+    uint64_t id;
+    char name[EMPLOYEE_NAME_SIZE];
+    Employee__Gender gender;
+    uint64_t date_of_birth;
+    double last_10_annual_salary;
+    double last_10_annual_bonus;
+    double last_10_annual_sales;
 };
 
 // database operations
