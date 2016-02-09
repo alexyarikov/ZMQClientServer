@@ -1,0 +1,6 @@
+syntax="proto2";
+
+message DeleteResponse
+{
+  required bool result = 1;
+}

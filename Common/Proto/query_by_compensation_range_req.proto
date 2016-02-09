@@ -1,0 +1,7 @@
+syntax="proto2";
+
+message QueryByCompensationRangeRequest
+{
+  required double min = 1;
+  required double max = 2;
+}

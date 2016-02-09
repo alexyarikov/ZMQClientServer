@@ -1,0 +1,7 @@
+syntax="proto2";
+
+message InsertResponse
+{
+  required bool result       = 1;
+  required string result_msg = 2;
+}

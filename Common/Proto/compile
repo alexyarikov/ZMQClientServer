@@ -1,0 +1,16 @@
+#!/bin/sh
+COMPILER_PATH=/usr/local/bin/./protoc-c
+OUTPUT_PATH=/home/alex/projects/cinarra_task/Common/Data
+MESSAGES_PATH=/home/alex/projects/cinarra_task/Common/Proto
+
+rm -f $OUTPUT_PATH/*
+
+$COMPILER_PATH --c_out=$OUTPUT_PATH --proto_path=$MESSAGES_PATH $MESSAGES_PATH/common.proto
+$COMPILER_PATH --c_out=$OUTPUT_PATH --proto_path=$MESSAGES_PATH $MESSAGES_PATH/insert_req.proto
+$COMPILER_PATH --c_out=$OUTPUT_PATH --proto_path=$MESSAGES_PATH $MESSAGES_PATH/insert_res.proto
+$COMPILER_PATH --c_out=$OUTPUT_PATH --proto_path=$MESSAGES_PATH $MESSAGES_PATH/delete_req.proto
+$COMPILER_PATH --c_out=$OUTPUT_PATH --proto_path=$MESSAGES_PATH $MESSAGES_PATH/delete_res.proto
+$COMPILER_PATH --c_out=$OUTPUT_PATH --proto_path=$MESSAGES_PATH $MESSAGES_PATH/query_by_id_req.proto
+$COMPILER_PATH --c_out=$OUTPUT_PATH --proto_path=$MESSAGES_PATH $MESSAGES_PATH/query_by_id_res.proto
+$COMPILER_PATH --c_out=$OUTPUT_PATH --proto_path=$MESSAGES_PATH $MESSAGES_PATH/query_by_compensation_range_req.proto
+$COMPILER_PATH --c_out=$OUTPUT_PATH --proto_path=$MESSAGES_PATH $MESSAGES_PATH/query_by_compensation_range_res.proto

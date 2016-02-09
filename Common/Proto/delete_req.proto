@@ -1,0 +1,6 @@
+syntax="proto2";
+
+message DeleteRequest
+{
+  required uint64 id = 1;
+}

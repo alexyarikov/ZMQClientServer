@@ -1,0 +1,8 @@
+syntax="proto2";
+
+import "common.proto";
+
+message InsertRequest
+{
+  required Employee employee = 1;
+}
